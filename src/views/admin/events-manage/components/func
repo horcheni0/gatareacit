@@ -1,0 +1,28 @@
+  /*
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // Only include properties that exist in the event object
+    const eventData = { 
+      name: name, 
+      location: location, 
+      start: start, 
+      end: end 
+    };
+    // Make the HTTP request to update the event
+    const response = await fetch(`/events/${event._id}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(eventData)
+    });
+    if (response.ok) {
+      // Dispatch an action to update the event with the new values
+      dispatch({ type: 'UPDATE_EVENT', payload: { _id: event._id, ...eventData } });
+      // Close the modal
+      handleClose();
+    } else {
+      // Handle the error
+    }
+  };
+  */
