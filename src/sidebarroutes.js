@@ -2,22 +2,23 @@ import React from "react";
 
 // Admin Imports
 import MainDashboard from "views/admin/default";
-import ContactUS from "views/admin/help";
+
 import Chat from "views/admin/chat";
-import Booth from "views/admin/Booth";
+
 import Profile from "views/admin/profile";
-import DataTables from "views/admin/tables";
+
 import CalendarComponent from "views/admin/calandar";
+import Signup from "views/auth/Signup";
+import MessageAdmin from "views/admin/message/message_admin";
 // Icon Imports
 import {
   MdOutlineRemoveRedEye,
   MdFormatListNumberedRtl,
   MdHome,
-  MdBarChart,
   MdPerson,
   MdEventAvailable,
   MdOutlineSms,
-  MdHelp
+  
   
 } from "react-icons/md";
 import ManagaEvent from "views/admin/events-manage";
@@ -30,15 +31,9 @@ const routes = [
     icon: <MdHome className="h-6 w-6" />,
     component: <MainDashboard />,
   },
+
   {
-    name: "Data Tables",
-    layout: "/admin",
-    icon: <MdBarChart className="h-6 w-6" />,
-    path: "data-tables",
-    component: <DataTables />,
-  },
-  {
-    name: "Manage Events",
+    name: "Manage event",
     layout: "/admin",
     icon: <MdFormatListNumberedRtl className="h-6 w-6"/>,
     path: "events-manage",
@@ -61,12 +56,14 @@ const routes = [
     component: <Chat />,
   },
   {
-    name: "Booth",
+    name: "add users",
     layout: "/admin",
     path: "booth",
-    icon: <MdOutlineRemoveRedEye className="h-6 w-6" />,
-    component: <Booth />,
+    icon: <MdPerson className="h-6 w-6" />,
+    
+    component: <Signup />,
   },
+ 
   {
     name: "Profile",
     layout: "/admin",
@@ -75,11 +72,12 @@ const routes = [
     component: <Profile />,
   },
   {
-    name: "Help",
+    name: "Reading requests  ",
     layout: "/admin",
     path: "help",
-    icon: <MdHelp className="h-6 w-6" />,
-    component: <ContactUS/>,
+    icon: <MdOutlineRemoveRedEye className="h-6 w-6" />,
+    component: <MessageAdmin />,
+    
   },
  
 ];

@@ -20,7 +20,7 @@ const Signup = () => {
       <div className="mt-[10vh] w-full max-w-full flex-col items-center md:pl-4 lg:pl-0 xl:max-w-[420px]">
 
     <form className="signup" onSubmit={handleSubmit}>
-      <h3 className="mb-2.5 text-4xl font-bold text-navy-700 dark:text-white">Sign Up</h3>
+      <h3 className="mb-2.5 text-4xl font-bold text-navy-700 dark:text-white">creat users</h3>
       <label>First Name:</label>
       <input  className='w-full border rounded box-border mt-2.5 mb-5 p-2.5 border-solid border-[#ddd]'
         type="text" 
@@ -51,7 +51,7 @@ const Signup = () => {
     </form>
     <div className="mt-4">
         <span className=" text-sm font-medium text-navy-700 dark:text-gray-600">
-         You already have account ?
+         test account ?
         </span>
         <a
           href="/auth/sign-in "

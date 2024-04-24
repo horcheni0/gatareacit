@@ -1,4 +1,4 @@
-/*const Messages = require("../models/messageModel");
+const Messages = require("../models/messageModel");
 
 module.exports.getMessages = async (req, res, next) => {
   try {
@@ -43,7 +43,7 @@ module.exports.sendMessage = async (req, res, next) => {
     next(ex);
   }
 };
-*/
+
 
 /*module.exports.addMessage = async (req, res, next) => {
   try {

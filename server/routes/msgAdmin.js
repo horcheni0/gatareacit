@@ -1,25 +1,14 @@
-const express = require('express')
+// messagetoadminRoutes.js
+const express = require('express');
+const router = express.Router();
 const {
-  getmsg,
-  createmsg,
-  deletemsg
-} = require('../controllers/messagetoadminController')
+  getMsg,
+  createMsg,
+  deleteMsg
+} = require('../controllers/messagetoadminController');
 
-const router = express.Router()
-// GET all events
-router.get('/', getmsg)
+router.get('/', getMsg);
+router.post('/', createMsg);
+router.delete('/:id', deleteMsg);
 
-// GET a single event
-//router.get('/:id', getEvent)
-
-// POST event
-router.post('/', createmsg)
-
-// DELETE event
-router.delete('/:id', deletemsg)
-
-// UPDATE event
-//router.patch('/:id', updateEvent)
-
-module.exports = router
-
+module.exports = router;

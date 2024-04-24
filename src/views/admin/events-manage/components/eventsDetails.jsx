@@ -3,9 +3,10 @@ import { useEventsContext } from '../hooks/useEventsContext';
 import formatDistanceToNow from 'date-fns/formatDistanceToNow';
 import EventModal from './EventModel';
 const { format } = require('date-fns');
+
 const EventDetails = ({ event }) => {
-  const [logo, setLogo] = useState(event.logo);
   const { dispatch } = useEventsContext();
+
   const handleClick = async () => {
     const response = await fetch('/api/events/' + event._id, {
       method: 'DELETE',
@@ -15,15 +16,13 @@ const EventDetails = ({ event }) => {
       dispatch({ type: 'DELETE_EVENT', payload: json });
     }
   };
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
   };
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true);
-  };
   return (
     <div className='event-details p-5 rounded-2xl relative shadow-[2px_2px_5px_rgba(0,0,0,0.05)] mx-auto my-5 bg-white'>
       <div className='flex'>
@@ -31,7 +30,7 @@ const EventDetails = ({ event }) => {
           <p>
             <strong></strong>
             <img
-              src={logo}
+              src={event.logo}
               style={{ width: '200px', height: '200px' }}
               alt='logo'
               className='rounded'
@@ -87,4 +86,5 @@ const EventDetails = ({ event }) => {
     </div>
   );
 };
+
 export default EventDetails;

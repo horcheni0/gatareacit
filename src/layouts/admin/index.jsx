@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import Navbar from "components/navbar";
 import Sidebar from "components/sidebar";
-import Footer from "components/footer/Footer";
+
 import routes from "routes.js";
 import {useAuthContext} from 'views/auth/hooks/useAuthContext'
 
@@ -88,9 +88,7 @@ export default function Admin(props) {
                 />
               </Routes>
             </div>
-            <div className="p-3">
-              <Footer />
-            </div>
+            
           </div>
         </main>
       </div>

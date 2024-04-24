@@ -2,17 +2,18 @@ import React from "react";
 
 // Admin Imports
 
-import ProfileModal from "views/admin/profile"
- import GenderChar from "views/admin/gender"
+import ProfileModal from "views/admin/profile";
+ import GenderChar from "views/admin/gender";
 import MainDashboard from "views/admin/default";
 import Chat from "views/admin/chat";
-import ContactUS from "views/admin/help";
-import Booth from "views/admin/Booth";
+
 import CalendarComponent from "views/admin/calandar";
 import Profile from "views/admin/profile";
-import DataTables from "views/admin/tables";
-import EventModal from "views/admin/events-manage/components/EventModel"
-import SearchModal from "views/admin/tables/components/searchModel"
+
+import EventModal from "views/admin/events-manage/components/EventModel";
+
+import Signup from "views/auth/Signup";
+import MessageAdmin from "views/admin/message/message_admin";
 
 // Auth Imports
 import SignIn from "views/auth/SignIn";
@@ -21,12 +22,13 @@ import SignIn from "views/auth/SignIn";
 import {
   MdFormatListNumberedRtl,
   MdHome,
-  MdBarChart,
+  
   MdPerson,
   MdEventAvailable,
   MdLogout,
   MdOutlineSms,
-  MdHelp
+  MdOutlineRemoveRedEye,
+ 
   
 } from "react-icons/md";
 import SignUp from "views/auth/Signup";
@@ -50,13 +52,7 @@ const routes = [
     component: <MainDashboard />,
   },
  
-  {
-    name: "Data Tables",
-    layout: "/admin",
-    icon: <MdBarChart className="h-6 w-6" />,
-    path: "data-tables",
-    component: <DataTables />,
-  },
+ 
   {
     name: "Manage Events",
     layout: "/admin",
@@ -71,13 +67,7 @@ const routes = [
     icon: <MdEventAvailable className="h-6 w-6" />,
     component: <EventModal />,
   },
-  {
-    name: "Search",
-    layout: "/admin",
-    path: "Data Tables/search",
-    icon: <MdEventAvailable className="h-6 w-6" />,
-    component: <SearchModal />,
-  },
+
   {
     name: "Profile",
     layout: "/admin",
@@ -104,7 +94,7 @@ const routes = [
     name: "calendar",
     layout: "/admin",
     path: "calendar",
-    icon: <MdEventAvailable  className="h-6 w-6" />,
+    icon: <Calandar  className="h-6 w-6" />,
     component:< CalendarComponent />,
   },
   {
@@ -122,18 +112,19 @@ const routes = [
     component: <Chat />,
   },
   {
-    name: "Booth",
+    name: "add users",
     layout: "/admin",
     path: "booth",
     icon: <MdPerson className="h-6 w-6" />,
-    component: <Booth />,
+    component: <Signup />,
   },
   {
-    name: "help",
+    name: "Reading requests ",
     layout: "/admin",
     path: "help",
-    icon: <MdHelp className="h-6 w-6" />,
-    component: <ContactUS/>,
+    icon: <MdOutlineRemoveRedEye className="h-6 w-6" />,
+    component: <MessageAdmin />,
+    
   },
  
 ];

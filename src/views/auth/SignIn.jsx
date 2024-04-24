@@ -36,12 +36,7 @@ export default function SignIn() {
         <span className=" text-sm font-medium text-navy-700 dark:text-gray-600">
           Not registered yet?
         </span>
-        <a
-          href="/auth/sign-up "
-          className="ml-1 text-sm font-medium text-brand-500 hover:text-brand-600 dark:text-white"
-        >
-          Create an account
-        </a>
+      
       </div>
     </div>
     </div>

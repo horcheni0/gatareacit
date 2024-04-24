@@ -1,5 +1,5 @@
 import page404 from './page404.css'
-import logo from '../../assets/img/navbar/datadoit.png'
+
 import React from 'react'
 
 const Page404 = () => {
@@ -9,8 +9,8 @@ const Page404 = () => {
     <div class="stars">
         <div class="custom-navbar">
             <div class="brand-logo">
-                <img src={logo} width="80px" alt=''/>
-                <p className='p1'>DataDoIt</p>
+                
+                <p className='p1'>gata</p>
             </div>
         </div>
         <div className="central-body block">

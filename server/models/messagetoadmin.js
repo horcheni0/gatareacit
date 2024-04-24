@@ -1,12 +1,13 @@
-const mongoose = require('mongoose')
+// messagetoadminModel.js
+const mongoose = require('mongoose');
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
 const messageAdminSchema = new Schema({
   fullname: {
     type: String,
     required: true
-    },
+  },
   email: {
     type: String,
     required: true
@@ -17,7 +18,7 @@ const messageAdminSchema = new Schema({
   },
   number: {
     type: Number
-  },
-}, { timestamps: true })
+  }
+}, { timestamps: true });
 
-module.exports = mongoose.model('message', messageAdminSchema)
+module.exports = mongoose.model('Message', messageAdminSchema);

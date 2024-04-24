@@ -1,4 +1,4 @@
-const VideoIcon = () => {
+/*const VideoIcon = () => {
   return (
     <svg
       width="20"
@@ -15,4 +15,4 @@ const VideoIcon = () => {
   );
 };
 
-export default VideoIcon;
+export default VideoIcon;*/

@@ -1,5 +1,5 @@
 /* eslint-disable */
-import datadoit from 'assets/img/navbar/datadoit.png'
+
 import { HiX } from "react-icons/hi";
 import Links from "./componentsrtl/Links";
 
@@ -20,9 +20,9 @@ const Sidebar = ({ open, onClose }) => {
       </span>
 
       <div className={`mx-[50px] mt-[10px] flex items-center`}>
-        <img src={datadoit} alt='datadoit' className={`w-12 mt-6`}/>
+        
         <div className="mt-1 ml-1 h-2.5 font-poppins text-[26px] font-bold  text-navy-700 dark:text-white">
-          DataDoIt
+          GATA
         </div>
       </div>
       <div class="mt-[30px] mb-7 h-px bg-gray-300 dark:bg-white/30" />
